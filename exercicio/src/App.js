@@ -2,6 +2,7 @@ import './App.css';
 import ListRender from './components/ListRender';
 import ConditionalRender from './components/ConditionalRender';
 import ShowUserName from './components/ShowUserName';
+import CarDetails from './components/CarDetails';
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
       <ListRender />
       <ConditionalRender />
       <ShowUserName name={name} />
+      <CarDetails km={" " + 1000000} brand=" Toyota" color=" blue" />
     </div >
   );
 }
