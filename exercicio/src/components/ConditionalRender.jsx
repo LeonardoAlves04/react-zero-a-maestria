@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 
 function ConditionalRender() {
-  const [name, setName] = useState("Leonardo");
+  const [name, setName] = useState("Fi do Bil");
 
   return (
     <div>
-      {name === "Fi do Bil" ? (
+      {name === "Leonardo" ? (
         <div>
-          <p>O nome é Fi do Bil </p>
+          <p>O nome é Leonardo </p>
         </div>
       ) : (
         <p>Nome do caboclo não encontrado</p>
       )}
-      <button onClick={() => setName("Fi do Bil")}>MUDAR NOME</button>
+      <button onClick={() => setName("Leonardo")}>MUDAR NOME</button>
     </div>
   );
 }
