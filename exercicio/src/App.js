@@ -6,6 +6,9 @@ import CarDetails from './components/CarDetails';
 import Fragment from './components/Fragment';
 import Container from './components/Container';
 import ExecuteFunction from './components/ExecuteFunction';
+import { useState } from 'react';
+import Message from './components/Message';
+import ChangeMessageState from './components/ChangeMessageState';
 
 function App() {
   const name = "Leonardo"
@@ -19,6 +22,13 @@ function App() {
   function showMessage() {
     console.log("executando a função!")
   }
+
+  const [message, setMessage] = useState("")
+
+  const handleMessage = (msg) => {
+    setMessage(msg)
+  }
+
   return (
     <div className="App">
       <ListRender />
@@ -36,6 +46,8 @@ function App() {
         <p>componente filho</p>
       </Container>
       <ExecuteFunction myFunction={showMessage} />
+      <Message msg={message} />
+      <ChangeMessageState handleMessage={handleMessage} />
     </div >
   );
 }
