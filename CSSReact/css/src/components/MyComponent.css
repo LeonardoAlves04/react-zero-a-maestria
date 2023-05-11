@@ -7,3 +7,13 @@ p {
   color: black;
   background-color: gold;
 }
+
+.red-title {
+  color: red;
+  background-color: black;
+}
+
+.title {
+  color: cyan;
+  background-color: yellow;
+}
