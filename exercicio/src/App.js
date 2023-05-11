@@ -9,6 +9,9 @@ import ExecuteFunction from './components/ExecuteFunction';
 import { useState } from 'react';
 import Message from './components/Message';
 import ChangeMessageState from './components/ChangeMessageState';
+import UserDetails from './components/UserDetails'
+
+
 
 function App() {
   const name = "Leonardo"
@@ -18,6 +21,13 @@ function App() {
     { id: 2, brand: "hyundai", color: "preto", newCar: false, km: 3213210 },
     { id: 3, brand: "honda", color: "cinza", newCar: true, km: 0 },
   ]
+
+  const users = [
+    { id: 4, name: "Leonardo", age: 19, job: "programador" },
+    { id: 5, name: "Maria", age: 21, job: "maquiadora" },
+    { id: 6, name: "Pedrinho", age: 15, job: "estudante" },
+    { id: 7, name: "José", age: 12, job: "estudante" },
+  ];
 
   function showMessage() {
     console.log("executando a função!")
@@ -48,6 +58,10 @@ function App() {
       <ExecuteFunction myFunction={showMessage} />
       <Message msg={message} />
       <ChangeMessageState handleMessage={handleMessage} />
+      {users.map((user) => (
+        <UserDetails key={user.id} name={user.name} job={user.job} age={user.age} />
+      ))}
+
     </div >
   );
 }
