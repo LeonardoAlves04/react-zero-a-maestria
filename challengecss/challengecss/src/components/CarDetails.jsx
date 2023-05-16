@@ -1,21 +1,11 @@
-import React from "react";
+import styles from "./CarDetails.module.css";
 
-const CarDetails = () => {
-  const Cars = (carro, cor, potencia) => [
-    { carro: "ferrari", potencia: "500 cavalos", cor: "preto" },
-    "mustang",
-    "400 cavalos",
-    "azul",
-    "lamborghini",
-    "600 cavalos",
-    "roxo",
-  ];
+const CarDetails = ({ car }) => {
   return (
-    <div>
-      <h1>Lista dos carros</h1>
-      {Cars.map((car) => (
-        <li>{car}</li>
-      ))}
+    <div className={styles.cardInfo}>
+      <h1>Modelo: {car.modelo}</h1>
+      <p>Potência: {car.potencia}</p>
+      <p>Cor: {car.cor}</p>
     </div>
   );
 };

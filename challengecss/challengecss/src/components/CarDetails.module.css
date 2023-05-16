@@ -1,0 +1,8 @@
+.cardInfo {
+  border: 5px solid red;
+  border-radius: 10px;
+  padding: 25px;
+  display: inline-block;
+  margin-left: 250px;
+  margin-top: 10px;
+}
