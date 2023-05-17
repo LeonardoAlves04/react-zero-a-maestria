@@ -5,21 +5,22 @@ const MyForm = ({ user }) => {
     // aula 3: gerenciamento de dados
     const [name, setName] = useState(user ? user.name : "")
     const [email, setEmail] = useState(user ? user.email : "")
+    const [bio, setBio] = useState("")
 
     const handleName = (e) => (setName(e.target.value))
 
-    console.log(name)
-    console.log(email)
 
     // aula 5: envio de formularios
 
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log("Enviando formulário");
-        console.log(name, email);
+        console.log(name, email, bio);
 
+        // aula 7: resetando formularios
         setName("");
         setEmail("");
+        setBio("")
     }
 
     return (
@@ -43,6 +44,14 @@ const MyForm = ({ user }) => {
                         placeholder="Digite aqui o seu e-mail"
                         onChange={(e) => setEmail(e.target.value)}
                         value={email} />
+                </label>
+                {/* aula 9 - textarea */}
+                <label>
+                    <span>
+                        Bio:
+                    </span>
+                    <textarea name="bio" placeholder="escreva a sua profissão aqui" onChange={(e) => setBio(e.target.value)} value={bio}></textarea>
+                    <input type="submit"></input>
                 </label>
             </form>
         </div >
