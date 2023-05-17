@@ -7,6 +7,8 @@ const MyForm = () => {
     const [email, setEmail] = useState()
 
     const handleName = (e) => (setName(e.target.value))
+
+    console.log(email)
     return (
         // aula 1 : criação de formulários
         < div >
@@ -18,7 +20,7 @@ const MyForm = () => {
                 <input type="submit" placeholder="Enviar" />
                 {/* aula 2: label envolvendo input */}
                 <label>
-                    <input type="email" name="email" placeholder="digite aqui o seu e-mail" />
+                    <input type="email" name="email" placeholder="Digite aqui o seu e-mail" onChange={(e) => setEmail(e.target.value)} />
                 </label>
             </form>
         </div >
