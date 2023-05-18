@@ -5,8 +5,8 @@ const MyForm = ({ user }) => {
     // aula 3: gerenciamento de dados
     const [name, setName] = useState(user ? user.name : "")
     const [email, setEmail] = useState(user ? user.email : "")
-    const [bio, setBio] = useState("")
-    const [role, setRole] = useState("")
+    const [bio, setBio] = useState(user ? user.bio : "")
+    const [role, setRole] = useState(user ? user.role : "")
 
     const handleName = (e) => (setName(e.target.value))
 
@@ -16,12 +16,13 @@ const MyForm = ({ user }) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log("Enviando formulário");
-        console.log(name, email, bio);
+        console.log(name, email, bio, role);
 
         // aula 7: resetando formularios
         setName("");
         setEmail("");
-        setBio("")
+        setBio("");
+        setRole("")
     }
 
     return (
@@ -56,7 +57,7 @@ const MyForm = ({ user }) => {
                 </label>
                 <label>
                     <span>Função dentro da empresa:</span>
-                    <select name="role" onChange={(e) =>}>
+                    <select name="role" onChange={(e) => setRole(e.target.value)} value={role}>
                         <option value="editor">editor</option>
                         <option value="admin">administrador</option>
                         <option value="supervisor">supervisor</option>
