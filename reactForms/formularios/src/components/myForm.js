@@ -6,6 +6,7 @@ const MyForm = ({ user }) => {
     const [name, setName] = useState(user ? user.name : "")
     const [email, setEmail] = useState(user ? user.email : "")
     const [bio, setBio] = useState("")
+    const [role, setRole] = useState("")
 
     const handleName = (e) => (setName(e.target.value))
 
@@ -52,6 +53,14 @@ const MyForm = ({ user }) => {
                     </span>
                     <textarea name="bio" placeholder="escreva a sua profissão aqui" onChange={(e) => setBio(e.target.value)} value={bio}></textarea>
                     <input type="submit"></input>
+                </label>
+                <label>
+                    <span>Função dentro da empresa:</span>
+                    <select name="role" onChange={(e) =>}>
+                        <option value="editor">editor</option>
+                        <option value="admin">administrador</option>
+                        <option value="supervisor">supervisor</option>
+                    </select>
                 </label>
             </form>
         </div >
