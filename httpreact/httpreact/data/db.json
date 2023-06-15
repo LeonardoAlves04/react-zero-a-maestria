@@ -24,6 +24,11 @@
       "name": "capa de chuva",
       "price": "50.99",
       "id": 5
+    },
+    {
+      "name": "camise preta",
+      "price": "59",
+      "id": 6
     }
   ]
 }
