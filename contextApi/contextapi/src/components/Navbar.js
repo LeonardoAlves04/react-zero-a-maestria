@@ -1,19 +1,23 @@
 import React from 'react'
 import { NavLink } from "react-router-dom"
+import "./Navbar.css"
 
 const Navbar = () => {
     return (
-        <div>Navbar
-            <NavLink to={"/"}>
-                <button>Home</button>
-            </NavLink>
-            <NavLink to={"/About"}>
-                <button>About</button>
-            </NavLink>
-            <NavLink to={"/Contact"}>
-                <button>Contact</button>
-            </NavLink>
-        </div>
+        <div>
+            <h1>Navbar</h1>
+            <nav>
+                <NavLink to={"/"}>
+                    Home
+                </NavLink>
+                <NavLink to={"/About"}>
+                    About
+                </NavLink >
+                <NavLink to={"/Contact"}>
+                    Contact
+                </NavLink >
+            </nav>
+        </div >
     )
 }
 
