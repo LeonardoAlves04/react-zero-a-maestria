@@ -10,6 +10,7 @@ import { useState } from 'react';
 import Message from './components/Message';
 import ChangeMessageState from './components/ChangeMessageState';
 import UserDetails from './components/UserDetails'
+import Timer from './components/Timer';
 
 
 
@@ -62,6 +63,7 @@ function App() {
         <UserDetails key={user.id} name={user.name} job={user.job} age={user.age} />
       ))}
 
+      <Timer />
     </div >
   );
 }
